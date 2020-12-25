@@ -1,0 +1,11 @@
+<h1>Student Details</h1>
+<h3>Id : {{student.id}}</h3>
+<h3>Name : {{student.name}}</h3>
+<input type="text" [(ngModel)]="student.name">
+<h3>Address : {{student.address}}</h3>
+<input type="text" (change)="updateAddress($event.target.value)">
+<h3>Age : {{student.age}}</h3>
+<input type="number" (change)="updateAge($event.target.value)">
+<h3>Mark: {{student.mark}}</h3>
+<input type="number" (change)="updateMark($event.target.value)">
+<h3>Avatar : </h3><img [src]="student.avatar" class="img-thumbnail">
