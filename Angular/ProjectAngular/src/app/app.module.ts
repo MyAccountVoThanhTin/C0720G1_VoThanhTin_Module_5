@@ -9,6 +9,7 @@ import { BtHangNgayComponent } from './bt-hang-ngay/bt-hang-ngay.component';
 import {FormsModule} from "@angular/forms";
 import { CalculatorComponent } from './03.Angular_Overview/practices/calculator/calculator.component';
 import { ChoiceColorComponent } from './03.Angular_Overview/practices/choice-color/choice-color.component';
+import { Module5CaseStudyComponent } from './module5-case-study/module5-case-study.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ChoiceColorComponent } from './03.Angular_Overview/practices/choice-col
     PetComponent,
     BtHangNgayComponent,
     CalculatorComponent,
-    ChoiceColorComponent
+    ChoiceColorComponent,
+    Module5CaseStudyComponent
   ],
   imports: [
     BrowserModule,
