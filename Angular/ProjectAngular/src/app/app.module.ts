@@ -10,6 +10,9 @@ import {FormsModule} from "@angular/forms";
 import { CalculatorComponent } from './03.Angular_Overview/practices/calculator/calculator.component';
 import { ChoiceColorComponent } from './03.Angular_Overview/practices/choice-color/choice-color.component';
 import { Module5CaseStudyComponent } from './module5-case-study/module5-case-study.component';
+import { ListStudentComponent } from './bt-hang-ngay/list-student/list-student.component';
+import { StudentDetailsComponent } from './bt-hang-ngay/student-details/student-details.component';
+import { HackerNewComponent } from './04.Component_And_Templet/practices/hacker-new/hacker-new.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { Module5CaseStudyComponent } from './module5-case-study/module5-case-stu
     BtHangNgayComponent,
     CalculatorComponent,
     ChoiceColorComponent,
-    Module5CaseStudyComponent
+    Module5CaseStudyComponent,
+    ListStudentComponent,
+    StudentDetailsComponent,
+    HackerNewComponent
   ],
   imports: [
     BrowserModule,

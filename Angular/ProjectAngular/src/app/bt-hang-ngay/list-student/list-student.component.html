@@ -1,0 +1,39 @@
+<div class="container">
+  <h2 style="text-align: center;font-weight: bold;font-size: 30px">List Student</h2>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Age</th>
+      <th>Avatar</th>
+      <th>Mark</th>
+      <th>Result</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of listStudents">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.address}}</td>
+      <td>{{student.age}}</td>
+      <td><img [src]="student.avatar" style="height: 50px;width: 60px"></td>
+      <td>{{student.mark}}</td>
+      <td>
+        <div *ngIf="this.student.mark >5,else elseBlock" [style.color]="'blue'">Pass</div>
+        <ng-template #elseBlock>
+          <div *ngIf="this.student.mark ==5,else else1" [style.color]="'green'">Normal</div>
+          <ng-template #else1><span [style.color]="'red'">Fail</span></ng-template>
+        </ng-template>
+      </td>
+      <td>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modelId" (click)="getStudentDetails(student)">Show Details</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-student-details [student]="studentDetails"></app-student-details>
+
