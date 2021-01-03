@@ -1,0 +1,17 @@
+<h2>Today's article</h2>
+<hr>
+<app-add-new-hacker-new (newItemEvent)="addItem($event)" (newArticle)="showArticle($event)"></app-add-new-hacker-new>
+<div *ngFor="let art of article">
+  <a href="{{art.URlNews}}" target="_blank">{{art.title}}</a>
+  <app-likes-hackernew></app-likes-hackernew>
+</div>
+<hr>
+<div>
+  <h2>Test</h2>
+  <p>{{title}}</p>
+  <p>{{urlNews}}</p>
+</div>
+
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>

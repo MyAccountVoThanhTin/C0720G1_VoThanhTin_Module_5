@@ -1,0 +1,37 @@
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+  Add New Hacker News
+</button>
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Title</label>
+            <input #newTitle type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">URL</label>
+            <input #newURL type="text" class="form-control" id="exampleInputPassword1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button (click)="addArticle(newTitle.value,newURL.value)" type="button" data-dismiss="modal" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--<label>Title: <input #newTitle></label>-->
+<!--<label>URL: <input #newURL></label>-->
+<!--<button (click)="addArticle(newTitle.value,newURL.value)">Add to parent's list</button>-->
+<br>
+<label>Add an item: <input #newItem></label>
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>
